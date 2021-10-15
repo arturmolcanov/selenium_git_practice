@@ -23,6 +23,7 @@ class TestOne(BaseClass):
         confirmPage.getDropdown().send_keys("Lith")
         self.verifyLinkPresence("Lithuania")
         confirmPage.selectFromDropdown().click()
+        log.info("Got country")
         confirmPage.tickCheckbox().click()
         confirmPage.pressConfirm().click()
         message = confirmPage.getConfirmMessage().text
